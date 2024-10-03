@@ -12,7 +12,7 @@ class Conv_NN():
     def setup(self):
         self.model.add(tensorflow.keras.layers.Conv2D(32,(3,3), activation="relu", input_shape = (28,28,1)))
         self.model.add(tensorflow.keras.layers.MaxPooling2D(pool_size=(2,2)))
-        self.model.add(tensorflow.keras.layers.Conv2D(64,(3,3), activation="relu"))
+        self.model.add(tensorflow.keras.layers.Conv2D(64,(3,3), activation="relu")) #64 Features in the feature space
         self.model.add(tensorflow.keras.layers.MaxPooling2D(pool_size=(2,2)))
         self.model.add(tensorflow.keras.layers.Conv2D(64,(3,3), activation="relu"))
         self.model.add(tensorflow.keras.layers.Flatten())
